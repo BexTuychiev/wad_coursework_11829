@@ -33,3 +33,36 @@ Below is a list of action items categorizez based on their priority according to
 1. User reviews: beyond scope, requires complex moderation and storage considerations.
 2. Recommendation system: this could be great feature to have but requires advanced ML algorithms.
 3. Trailer playback functionality: Involves complex media handling with possible licensing issues.
+
+### Displaying a Gantt chart
+
+This section is for the project Gantt chart. I will be updating its status as I make progress on each of the tasks listed. 
+
+```mermaid
+gantt
+    title WAD Coursework Timeline (11829)
+    dateFormat  YYYY-MM-DD
+    axisFormat %B %d
+
+    section Project Setup
+    GitHub Repository           :done, 2024-10-28, 1d
+    Development Environment     :active, 2024-10-29, 2d
+    Project Structure          :2024-10-31, 2d
+
+    section Backend Development
+    Database Schema            :2024-11-02, 3d
+    IMDB Data Import          :2024-11-05, 2d
+    API Development           :2024-11-07, 7d
+    Swagger Documentation     :2024-11-14, 2d
+
+    section Frontend Development
+    Angular Setup             :2024-11-16, 2d
+    Basic Components         :2024-11-18, 4d
+    CRUD Operations         :2024-11-22, 5d
+    Advanced Features       :2024-11-27, 4d
+
+    section Testing & Documentation
+    Testing                 :2024-12-01, 2d
+    Video Demo             :2024-12-03, 1d
+    Final Documentation    :crit, 2024-12-04, 1d
+```
