@@ -35,5 +35,5 @@ print(topic_dict[remainder])
 Output:
 
 ```
-Movies app
+Movies App
 ```
