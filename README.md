@@ -76,4 +76,4 @@ dotnet ef migrations add InitialCreate
 dotnet run
 ```
 
-The API will be available at <https://localhost:5001> or <http://localhost:5000>. 
+The API will be available at <https://localhost:5001> or <http://localhost:5000>.
