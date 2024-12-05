@@ -10,7 +10,7 @@ using MoviesApp.Data;
 namespace MoviesApp.Migrations
 {
     [DbContext(typeof(MovieDbContext))]
-    [Migration("20241205174248_InitialCreate")]
+    [Migration("20241205182452_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -42,7 +42,7 @@ namespace MoviesApp.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("Year")
+                    b.Property<int?>("Year")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");

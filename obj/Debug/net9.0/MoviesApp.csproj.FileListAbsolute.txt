@@ -153,3 +153,4 @@
 /Users/bexgboost/projects/web/coursework/MoviesApp/obj/Debug/net9.0/MoviesApp.pdb
 /Users/bexgboost/projects/web/coursework/MoviesApp/obj/Debug/net9.0/MoviesApp.genruntimeconfig.cache
 /Users/bexgboost/projects/web/coursework/MoviesApp/obj/Debug/net9.0/ref/MoviesApp.dll
+/Users/bexgboost/projects/web/coursework/MoviesApp/bin/Debug/net9.0/movies_seed.json

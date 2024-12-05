@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MoviesApp.Data;
 using MoviesApp.Models;
+using MoviesApp.Services;
 
 namespace MoviesApp.Controllers;
 
@@ -69,5 +70,20 @@ public class MovieController : ControllerBase
         _context.Movies.Remove(movie);
         await _context.SaveChangesAsync();
         return NoContent();
+    }
+
+    // POST: api/Movie/import
+    [HttpPost("import")]
+    public async Task<IActionResult> ImportMovies([FromServices] MovieImportService importService)
+    {
+        try
+        {
+            await importService.ImportMoviesFromJson();
+            return Ok("Movies imported successfully");
+        }
+        catch (Exception ex)
+        {
+            return BadRequest($"Error importing movies: {ex.Message}");
+        }
     }
 }

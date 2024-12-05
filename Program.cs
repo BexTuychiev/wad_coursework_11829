@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using MoviesApp.Data;
+using MoviesApp.Services;
+using System.IO;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +9,15 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// Configure base path for JSON file
+string contentRoot = builder.Environment.ContentRootPath;
+string jsonPath = Path.Combine(contentRoot, "movies_seed.json");
+builder.Services.AddScoped<MovieImportService>();
+builder.Services.Configure<MovieImportOptions>(options => 
+{
+    options.JsonFilePath = jsonPath;
+});
 
 // Add DbContext with SQLite
 builder.Services.AddDbContext<MovieDbContext>(options =>

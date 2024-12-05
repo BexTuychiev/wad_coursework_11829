@@ -17,7 +17,7 @@ namespace MoviesApp.Migrations
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Title = table.Column<string>(type: "TEXT", maxLength: 200, nullable: false),
-                    Year = table.Column<int>(type: "INTEGER", nullable: false),
+                    Year = table.Column<int>(type: "INTEGER", nullable: true),
                     Genre = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false),
                     Rating = table.Column<decimal>(type: "REAL", nullable: false),
                     Description = table.Column<string>(type: "TEXT", maxLength: 1000, nullable: true)

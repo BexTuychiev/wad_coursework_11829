@@ -23,7 +23,7 @@ public class MovieDbContext : DbContext
                 .HasMaxLength(200);
 
             entity.Property(e => e.Year)
-                .IsRequired();
+                .IsRequired(false);
 
             entity.Property(e => e.Genre)
                 .HasMaxLength(100);

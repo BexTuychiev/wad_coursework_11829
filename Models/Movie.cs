@@ -10,8 +10,7 @@ public class Movie
     [MaxLength(200)]
     public string Title { get; set; } = string.Empty;
 
-    [Required]
-    public int Year { get; set; }
+    public int? Year { get; set; }
 
     [MaxLength(100)]
     public string Genre { get; set; } = string.Empty;
